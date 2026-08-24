@@ -24,3 +24,10 @@ jobs:
      - name : updated os package
        run: echo "test job is running after build job"
        shell: bash
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+     - name : updated os package
+       run: echo "deploy job is running after test job"
+       shell: bash
