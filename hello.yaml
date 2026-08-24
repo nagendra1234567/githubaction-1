@@ -1,0 +1,24 @@
+name: frist github action pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+  test:
+    runs-on: ubuntu-latest
+    steps:
+     - name : updated os package
+       run: |
+          sudo apt-get update
+          sudo apt-get install python3.11 -y
