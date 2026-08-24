@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name : updated os package
-       run: |
-          sudo apt-get update
-          sudo apt-get install python3.11 -y
+       run: cho "updating the os packages"
+       shell: bash
+       
+        
