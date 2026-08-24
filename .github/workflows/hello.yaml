@@ -19,7 +19,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name : updated os package
-       run: cho "updating the os packages"
+       run: echo "updating the os packages"
        shell: bash
-       
-        
