@@ -22,5 +22,5 @@ jobs:
     needs: build
     steps:
      - name : updated os package
-       run: echo "updating the os packages"
+       run: echo "test job is running after build job"
        shell: bash
