@@ -1,0 +1,26 @@
+
+
+name: frist github action pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+     - name : updated os package
+       run: echo "updating the os packages"
+       shell: bash
